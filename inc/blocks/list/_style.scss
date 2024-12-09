@@ -1,0 +1,24 @@
+.bn-list {
+    &.--col-2 {
+        @include from(tablet) {
+            ul,
+            ol {
+                columns: 2;
+            }
+        }
+    }
+    &.--col-3 {
+        @include from(tablet) {
+            ul,
+            ol {
+                columns: 2;
+            }
+        }
+        @include from(laptop) {
+            ul,
+            ol {
+                columns: 3;
+            }
+        }
+    }
+}

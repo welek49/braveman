@@ -1,0 +1,17 @@
+.tns-nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    justify-content: center;
+    button {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: 1px solid map-get($colors, 'secondary');
+        background-color: transparent;
+        &.tns-nav-active {
+            background-color: map-get($colors, 'secondary');
+        }
+    }
+}

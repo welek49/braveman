@@ -1,0 +1,41 @@
+{
+  "name": "startplate",
+  "version": "2.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "gulp": "gulp",
+    "gulp-build": "gulp build",
+    "dev": "npm-run-all --parallel start gulp",
+    "dev-build": "npm-run-all --serial build gulp-build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "gulp": "^4.0.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "@wordpress/scripts": "^26.19.0",
+    "browser-sync": "^2.27.11",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "npm-run-all": "^4.1.5",
+    "photoswipe": "^5.3.6",
+    "sass": "^1.57.1",
+    "tiny-slider": "^2.9.4",
+    "venobox": "^2.0.4",
+    "webpack": "^5.75.0",
+    "webpack-stream": "^7.0.0"
+  }
+}

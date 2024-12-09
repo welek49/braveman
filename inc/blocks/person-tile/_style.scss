@@ -1,0 +1,64 @@
+.person-tile {
+    background-color: #fff;
+
+    @include from(tabletL) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__image-wrapper {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 5px;
+        position: relative;
+        margin-bottom: 2rem;
+
+        @include from(tablet) {
+            height: 300px;
+        }
+        @include from(desktop) {
+            margin-bottom: 3rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__name {
+        color: map-get($colors, 'primary');
+    }
+    &__position {
+        margin-bottom: 2rem;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 2rem;
+
+        @include from(laptop) {
+            font-size: 1.4rem;
+            line-height: 2.5rem;
+        }
+    }
+    &__desc {
+        margin-bottom: 2rem;
+    }
+    &__email {
+        font-weight: 600;
+        text-decoration: underline;
+        transition: 0.4s ease-out;
+        color: $font-color;
+        display: inline-flex;
+        align-items: center;
+
+        @include from(tabletL) {
+            margin-top: auto;
+        }
+        @include hover() {
+            color: map-get($colors, 'primary');
+        }
+    }
+}

@@ -1,0 +1,53 @@
+/*
+* Styles to custom post or normal post block
+*/
+.cpt-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem 0;
+    &__cover {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        aspect-ratio: 1;
+        background-color: #000;
+        &--img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            opacity: 0.75;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            transition: transform 0.4s ease;
+        }
+        @include hover(same) {
+            &--img {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+    }
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem 0;
+        @include to(phoneL) {
+            align-items: center;
+            text-align: center;
+        }
+        @include from(phoneL) {
+            align-items: start;
+        }
+        &--title {
+            a {
+                @extend %h3;
+            }
+        }
+        &--excerpt {
+            margin-bottom: 1rem;
+        }
+    }
+}

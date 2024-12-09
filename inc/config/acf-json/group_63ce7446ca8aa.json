@@ -1,0 +1,45 @@
+{
+    "key": "group_63ce7446ca8aa",
+    "title": "Theme options - footer",
+    "fields": [
+        {
+            "key": "field_63e248fb5c8bd",
+            "label": "Copyright text",
+            "name": "copyright_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Enter the text that will appear in the footer at the very bottom",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "© Copyright 2022 <strong>Gesher Galicia<\/strong> - All rights reserved",
+            "maxlength": "",
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-footer-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1687249326
+}

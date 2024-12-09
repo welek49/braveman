@@ -1,0 +1,46 @@
+{
+    "key": "group_64118d88ee721",
+    "title": "Theme options - cookies",
+    "fields": [
+        {
+            "key": "field_64118d8928319",
+            "label": "Text",
+            "name": "cookies_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Add text to your cookies bar",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "very_simple",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-cookies"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1693497983,
+    "acfml_field_group_mode": "advanced"
+}

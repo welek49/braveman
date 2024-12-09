@@ -1,0 +1,62 @@
+/*
+* Adds styles to wysiwyg/text block
+*/
+.bn-wysiwyg {
+    @extend %text;
+    h1,
+    h2,
+    h3 {
+        margin-bottom: $wysiwyg-paragraph-margin-bottom-mobile;
+        @include from(phoneL) {
+            margin-bottom: $wysiwyg-paragraph-margin-bottom;
+        }
+    }
+    p {
+        margin-bottom: $wysiwyg-paragraph-margin-bottom-mobile;
+        @include from(phoneL) {
+            margin-bottom: $wysiwyg-paragraph-margin-bottom;
+        }
+    }
+    ul, ol {
+        margin-left: $wysiwyg-list-margin-left;
+        margin-bottom: $wysiwyg-paragraph-margin-bottom-mobile;
+        @include from(phoneL) {
+            margin-bottom: $wysiwyg-paragraph-margin-bottom;
+        }
+        li {
+            padding-left: $wysiwyg-list-li-padding-left;
+            padding-bottom: $wysiwyg-list-li-padding-bottom;
+        }
+    }
+    ul {
+        list-style: square;
+    }
+    a {
+        text-decoration: underline;
+    }
+    img {
+        &.aligncenter {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &.alignright {
+            float: right;
+            margin: 0.5em 0 0.5em 1em;
+        }
+        &.alignleft {
+            float: left;
+            margin: 0.5em 1em 0.5em 0;
+        }
+    }
+    &.--last-no-margin {
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

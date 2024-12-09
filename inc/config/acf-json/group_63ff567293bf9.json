@@ -1,0 +1,101 @@
+{
+    "key": "group_63ff567293bf9",
+    "title": "Theme options - 404",
+    "fields": [
+        {
+            "key": "field_63ff568950d1e",
+            "label": "Title",
+            "name": "404_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Add a title to the 404 page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63ff569350d1f",
+            "label": "Subtitle",
+            "name": "404_subtitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Add a subtitle to the 404 page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63ff569b50d20",
+            "label": "Text",
+            "name": "404_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Add a text to the 404 page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63ff56b250d21",
+            "label": "Button",
+            "name": "404_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Add a button to the 404 page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-404-page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1677834597
+}

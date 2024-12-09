@@ -1,0 +1,109 @@
+.horizontal-tabs {
+    &-tab {
+        display: grid;
+        opacity: 0;
+        position: absolute;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        transition: all 0.4s ease;
+        @include from(tabletL) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        &.--show {
+            opacity: 1;
+            position: relative;
+        }
+        &.--show & {
+            &__item {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        &__item {
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s ease-in-out;
+            &:hover {
+                img {
+                    transform: translate(-50%, -50%) scale(1.1);
+                }
+            }
+            @for $i from 1 to 10 {
+                &:nth-child(#{$i}) {
+                    transition-delay: $i * 0.05s;
+                }
+            }
+            @include to(tabletL) {
+                aspect-ratio: 3/2;
+            }
+            @include from(tabletL) {
+                min-height: 294px;
+            }
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                max-width: none;
+                // max-height: none;
+                object-fit: cover;
+                transform: translate(-50%, -50%);
+                transition: transform 0.4s ease;
+            }
+            &:first-child {
+                @include from(tabletL) {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                }
+            }
+        }
+    }
+    &-navigation {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem 8rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+        @include to(tabletL) {
+            justify-content: space-between;
+        }
+        &__buttons {
+            display: none;
+            @include from(tabletL) {
+                display: flex;
+                gap: 2.5rem;
+            }
+        }
+        &__select {
+            select {
+                @extend %btn;
+                font-family: $font-text;
+                padding-right: 5rem;
+                background: {
+                    color: map-get($colors, 'secondary');
+                    image: url($img-path + "arrow-select.webp");
+                    size: 16px 8px;
+                    repeat: no-repeat;
+                    position: calc(100% - 16px) 50%;
+                }
+                color: map-get($colors, 'light');
+                appearance: none;
+                @media (hover: hover) {
+                    &:hover {
+                        color: map-get($colors, 'light');
+                    }
+                }
+                @include from(tabletL) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

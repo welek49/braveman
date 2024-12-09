@@ -1,0 +1,73 @@
+/*
+*
+* Styles only for popup window
+*
+*/
+
+.bn-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $col-padding-mobile;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+    &__window {
+        position: relative;
+        display: flex;
+        padding: 5rem 2.5rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem 0;
+        text-align: center;
+        background-color: map-get($colors, 'light');
+        opacity: 0;
+        transform: translateY(-100px);
+
+        @include from(phoneL) {
+            padding: 5rem;
+            gap: 8rem 0;
+        }
+        &--title {
+            @extend %h3;
+            max-width: 60rem;
+        }
+        &--desc {
+            max-width: 60rem;
+        }
+        &--close {
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+            width: 10px;
+            height: 10px;
+            cursor: pointer;
+            background: {
+                image: url($img-path + "icon-close.svg");
+                size: contain;
+                position: center;
+                repeat: no-repeat;
+            }
+            @include from(phoneL) {
+                right: 3rem;
+                top: 3rem;
+            }
+        }
+    }
+    &.--open & {
+        &__window {
+            animation: menu-show 0.6s ease-in-out forwards;
+        }
+    }
+    &.--open {
+        pointer-events: all;
+        opacity: 1;
+    }
+}

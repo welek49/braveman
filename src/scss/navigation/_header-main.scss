@@ -1,0 +1,455 @@
+/*
+*  Styles for header main
+*  This file is part of header.scss
+*/
+
+.--absolute {
+    position: absolute;
+    top: 0;
+    .header:not(.--fixed) {
+        background-color: transparent;
+        .header__logo {
+            color: #fff;
+        }
+        .header__nav {
+            > ul {
+                > li:not(.--button) {
+                    &.menu-item-has-children {
+                        &:before {
+                            @include from(tabletL) {
+                                border-color: #fff;
+                            }
+                        }
+                    }
+                    > a {
+                        @include from(tabletL) {
+                            &:not(:hover) {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .header__hamburger:not(.--open) {
+            .header__hamburger--stick {
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+.header {
+    position: relative;
+    z-index: 9999;
+    padding: 2rem;
+    background-color: #fff;
+    min-height: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.--fixed {
+        position: fixed;
+        padding: 0 2rem;
+        animation: nav-fixed-show 0.6s ease-in-out forwards;
+    }
+    &.--fixed & {
+        &__logo {
+            object {
+                padding: 1rem 0;
+                @include from(tablet) {
+                    padding: 1.5rem 0;
+                }
+            }
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 1rem;
+        &--right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 0 2rem;
+            @include from(tabletL) {
+                gap: 0 3rem;
+            }
+        }
+    }
+    &__nav {
+        display: none;
+        @include from(menuMobile) {
+            display: flex;
+        }
+        > ul {
+            display: flex;
+            list-style: none;
+
+            @include to(menuMobile) {
+                padding: 1.5rem 0;
+                flex-direction: column;
+            }
+            @include from(menuMobile) {
+                justify-content: space-between;
+                align-items: center;
+                gap: 0 2.5rem;
+            }
+
+            > li:not(.--button) {
+                position: relative;
+                display: inline-block;
+                transition: 0.4s;
+                @include to(menuMobile) {
+                    padding-bottom: 2rem;
+                    &:not(:last-child) {
+                        border-bottom: 1px solid rgba(177, 177, 177, 0.15);
+                    }
+                    &.--active {
+                        padding-bottom: 0;
+                    }
+                }
+
+                @include hover() {
+                    & > .sub-menu {
+                        display: block;
+                    }
+                }
+                > a {
+                    display: inline-block;
+                    transition: all 0.4s ease;
+                    @extend %nav-font;
+                    border-radius: 10px;
+                    @include from(menuMobile) {
+                        padding: 6px 28px;
+                        border: 3px solid map-get($colors, "primary");
+                    }
+                    &:hover {
+                        color: map-get($colors, "primary");
+                    }
+                }
+                &.menu-item-has-children {
+                    position: relative;
+                    padding-right: 15px;
+                    @include from(tabletL) {
+                        padding-right: 20px;
+                    }
+                    &:before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        transition: 0.4s ease-in-out;
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        top: 0;
+                        right: 0;
+                        transform: rotate(-135deg);
+                        border: 2px solid map-get($colors, "secondary");
+                        border-right: none;
+                        border-bottom: none;
+
+                        @include from(menuMobile) {
+                            border-right: none;
+                            border-bottom: none;
+                            width: 1rem;
+                            height: 1rem;
+                            top: 50%;
+                            transform: translateY(-80%) rotate(-135deg);
+                            right: 0;
+                        }
+                    }
+                }
+                &.--active {
+                    @include to(menuMobile) {
+                        &:before {
+                            transform: rotate(45deg);
+                        }
+                        li {
+                            opacity: 0;
+                            @for $i from 1 to 10 {
+                                &:nth-child(#{$i}) {
+                                    animation-delay: $i * 0.1s;
+                                }
+                            }
+                            animation: menu-show 0.25s 0.4s ease forwards;
+                        }
+                    }
+                }
+                .sub-menu {
+                    animation: menu-show 0.4s ease forwards;
+                    list-style: none;
+                    @include to(menuMobile) {
+                        padding-left: 2rem;
+                        overflow: hidden;
+                        transition: 0.4s ease-in-out;
+                        height: 0;
+                    }
+                    @include from(menuMobile) {
+                        display: none;
+                        position: absolute;
+                        background-color: map-get($colors, "light");
+                        top: 100%;
+                        min-width: 25rem;
+                        padding: 2rem;
+                    }
+                    > li {
+                        padding: 1rem 0;
+                        @include to(menuMobile) {
+                            &:first-child {
+                                margin-top: 2rem;
+                            }
+                            &:last-child {
+                                margin-bottom: 2rem;
+                            }
+                        }
+                        a {
+                            display: inline-block;
+                            transition: all 0.4s ease;
+                            @extend %nav-font;
+                            @include from(tabletL) {
+                            }
+                            &:hover {
+                                color: map-get($colors, "primary");
+                            }
+                        }
+                    }
+                }
+            }
+            li.--button {
+                &__primary {
+                    display: flex;
+                    align-items: center;
+                    a {
+                        @extend %btn;
+                        background-color: map-get($colors, "primary");
+                        color: map-get($colors, "secondary");
+                        @media (hover: hover) {
+                            &:hover {
+                                color: map-get($colors, "secondary");
+                                background-color: map-get($colors, "primary");
+                            }
+                        }
+                    }
+                }
+                &__secondary {
+                    display: flex;
+                    align-items: center;
+                    a {
+                        @extend %btn;
+                        background-color: map-get($colors, "secondary");
+                        color: #fff;
+                        @media (hover: hover) {
+                            &:hover {
+                                color: #fff;
+                                background-color: map-get($colors, "secondary");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &--switch {
+            display: flex;
+            justify-content: ceenter;
+            align-items: center;
+            margin-left: 1.5rem;
+            .wpml-ls-legacy-list-horizontal {
+                padding: 0;
+            }
+            ul {
+                display: flex;
+                gap: 1.5rem;
+                li.wpml-ls-item {
+                    width: 5.5rem;
+                    height: 5.5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid #000000;
+                    border-radius: 50%;
+                    padding: 0;
+                    opacity: 0.8;
+                    transition: all 0.4s ease;
+                    &:hover {
+                        opacity: 1;
+                    }
+                    a.wpml-ls-link {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        width: 3.3rem;
+                        height: 3.3rem;
+                        overflow: hidden;
+                        padding: 0;
+                    }
+                    img {
+                        width: 5rem;
+                        height: 3.5rem;
+                        max-width: inherit;
+                        max-height: inherit;
+                    }
+                }
+            }
+        }
+        &.--open {
+            @include to(menuMobile) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100vh;
+                background-color: #fff;
+                animation: menu-show 0.4s ease forwards;
+                padding-top: 140px;
+                z-index: 1;
+                padding-bottom: 5rem;
+                ul:not(.sub-menu) {
+                    width: 100%;
+                    gap: 3rem;
+                    padding: 2rem;
+                    > li {
+                        animation: menu-show 0.4s ease forwards;
+                        opacity: 0;
+
+                        @for $i from 1 to 10 {
+                            &:nth-child(#{$i}) {
+                                animation-delay: $i * 0.1s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__logo {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        @extend %h5;
+        object {
+            pointer-events: none;
+            width: 100%;
+            height: auto;
+            max-height: 6rem;
+
+            @include from(tablet) {
+                max-height: 10rem;
+            }
+        }
+    }
+    &__contact {
+        position: absolute;
+        right: 0;
+        margin-right: 9rem;
+        display: flex;
+        gap: 0 3rem;
+        align-items: center;
+        a {
+            display: flex;
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        @include from(phoneL) {
+            display: none;
+        }
+    }
+    &__hamburger {
+        position: relative;
+        z-index: 2;
+        width: 34px;
+        height: 25px;
+        cursor: pointer;
+        @include from(menuMobile) {
+            display: none;
+        }
+        &.--open & {
+            &--stick {
+                &:nth-child(1) {
+                    width: 38px;
+                    top: 10px;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    left: 100%;
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    width: 38px;
+                    top: 10px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        &:hover & {
+            &--stick {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+        &--stick {
+            position: absolute;
+            width: 34px;
+            height: 4px;
+            border-radius: 2px;
+            background-color: map-get($colors, "secondary");
+            transition: all 0.4s ease;
+            transform-origin: 50% 50%;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background-color: map-get($colors, "primary");
+                z-index: 1;
+                transition: all 0.4s ease-in-out;
+            }
+            @for $i from 1 to 3 {
+                &:nth-child(#{$i}):before {
+                    transition-delay: $i * 0.1s;
+                }
+            }
+            &:nth-child(1) {
+                top: 0;
+                left: 0;
+            }
+            &:nth-child(2) {
+                top: 10px;
+                left: 0;
+            }
+            &:nth-child(3) {
+                top: 21px;
+                left: 0;
+            }
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 2.5rem;
+        right: 2.5rem;
+        width: 2rem;
+        height: 2rem;
+        fill: map-get($colors, "light");
+        cursor: pointer;
+        @include from(tabletL) {
+            display: none;
+        }
+    }
+}
+
+/*
+* Adds scroll stoper for mobile navigation
+*/
+.--scroll-disabled {
+    overflow: hidden;
+}

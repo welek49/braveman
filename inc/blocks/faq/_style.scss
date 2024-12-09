@@ -1,0 +1,71 @@
+/*
+* Styles only for faq block
+*/
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem 0;
+    @include from(phoneL) {
+        gap: 2.5rem 0;
+    }
+    &__tab {
+        position: relative;
+        cursor: pointer;
+        background-color: map-get($colors, 'primary');
+        &--question {
+            position: relative;
+            padding: 1.5rem;
+            @include from(phoneL) {
+                padding: 2rem;
+            }
+            @extend %text;
+            @extend %text-bigger;
+            &:before {
+                content: "";
+                position: absolute;
+                transform-origin: center center;
+                transition: all 0.4s ease;
+                top: 50%;
+                right: 2.5rem;
+                width: 1rem;
+                height: 1rem;
+                transform: translateY(-50%) rotate(-135deg);
+                border: 2px solid map-get($colors, 'secondary');
+                border-right: none;
+                border-bottom: none;
+                @include from(phoneL) {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    right: 5rem;
+                }
+            }
+        }
+        &--answer {
+            position: relative;
+            overflow: hidden;
+        }
+        &--text {
+            padding: 0 2.5rem 2.5rem;
+            @include from(phoneL) {
+                padding: 0 2rem 3rem;
+            }
+        }
+        &.--open & {
+            &--question {
+                &:before {
+                    transform: rotate(45deg);
+                }
+            }
+            &--answer {
+                animation: show-faq-tab 0.4s ease forwards;
+            }
+        }
+        &:not(.--open) & {
+            &--answer {
+                max-height: 0;
+                animation: hide-faq-tab 0.4s ease forwards;
+            }
+        }
+    }
+}

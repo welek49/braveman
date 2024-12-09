@@ -1,0 +1,94 @@
+/*
+*
+* The best place for login / register panel styles.
+*
+*/
+
+$primary-color : #F09F31;
+$secondary-color : #272727;
+$dark-gray-color : #191919;
+
+body.login {
+    color: $dark-gray-color;
+    background-color: $secondary-color;
+    .message {
+        border-radius: 7px;
+        border-left: 2px solid $primary-color;
+    }
+    form {
+        border-radius: 7px;
+        border: none;
+    }
+    h1 a {
+        width: 100%;
+        height: 85px;
+        background-image: url("../../assets/img/logo_white.png");
+        background-size: contain;
+    }
+}
+.wp-core-ui {
+    .button-primary,
+    .button {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $dark-gray-color;
+        transition: all 0.4s ease;
+        font-weight: 600;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color: $dark-gray-color;
+            transform: translateY(-4px);
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            opacity: 1;
+        }
+    }
+    .wp-hide-pw {
+        &:hover,
+        &:active,
+        &:focus {
+            transform: none;
+            border-color: transparent !important;
+            box-shadow: none !important;
+        }
+    }
+    select {
+        &:hover {
+            color: $secondary-color;
+        }
+        &:focus {
+            color: $secondary-color;
+            border-color: $secondary-color;
+        }
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="checkbox"] {
+        &:focus {
+            border-color: $secondary-color;
+        }
+    }
+
+    input[type="checkbox"]:checked::before {
+        filter: grayscale(100%);
+    }
+}
+
+select:hover,
+select:focus {
+    color: $secondary-color;
+}
+a:hover {
+    color: $secondary-color !important;
+}
+.login #backtoblog a, .login #nav a {
+    color: #FFF;
+    &:hover {
+        color: $primary-color !important;
+    }
+}
+.language-switcher label .dashicons {
+    color: $primary-color;
+}

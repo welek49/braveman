@@ -1,0 +1,45 @@
+/*
+* Styles only for gallery block
+*/
+
+.bn-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    &__wrapper {
+        width: 100%;
+        aspect-ratio: 1;
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 1;
+        @include from(phoneL) {
+            width: calc((100% - 2rem) / 2);
+        }
+        @include from(tablet) {
+            width: calc((100% - 4rem) / 3);
+        }
+        @include from(laptop) {
+            width: calc((100% - 6rem) / 4);
+        }
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            transition: transform 0.4s ease;
+        }
+    }
+}
+
+/*
+*
+* Styles for gallery plugin used in this block
+*
+*/
+
+.pswp img {
+    max-height: none;
+}

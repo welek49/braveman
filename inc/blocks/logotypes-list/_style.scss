@@ -1,0 +1,148 @@
+/*
+*
+* Styles only for Partners section
+*
+*/
+
+.logotypes-list {
+    padding: 2.5rem 6rem 6rem;
+    @include from(desktopL) {
+        padding: 0;
+    }
+    &__wrapper {
+        position: relative;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 4rem;
+    }
+    &__col {
+        width: calc((100% - 2rem) / 2);
+        @include from(tablet) {
+            width: calc((100% - 3 * 2rem) / 4);
+        }
+        @include from(laptop) {
+            width: calc((100% - 7 * 2rem) / 8);
+        }
+        a {
+            width: 100%;
+        }
+    }
+    .tns-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+
+        @include from(phoneL) {
+            margin-top: 0;
+        }
+
+        button {
+            background: none;
+            border: 1px solid map-get($colors, "secondary");
+            border-radius: 50%;
+            display: flex;
+            height: 4rem;
+            width: 4rem;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include from(phoneL) {
+                width: 60px;
+                height: 60px;
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                width: 10px;
+                height: 15px;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                transition: all 0.4s ease-out;
+            }
+
+            &:nth-child(1) {
+                left: -60px;
+
+                @include from(phoneL) {
+                    left: -70px;
+                }
+                @include from(tablet) {
+                    left: -80px;
+                }
+                @include from(desktopL) {
+                    left: -140px;
+                }
+                &:before {
+                    margin-right: -4px;
+                }
+
+                @media (hover: hover) {
+                    &:hover::before {
+                        transform: translateX(-4px);
+                    }
+                }
+                &::before {
+                    background-image: url(../../dist/img/icon-arrow-left-button.svg);
+                    @include to(phoneL) {
+                        width: 6px;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                right: -60px;
+
+                @include from(phoneL) {
+                    right: -70px;
+                }
+                @include from(tablet) {
+                    right: -80px;
+                }
+                @include from(desktopL) {
+                    right: -140px;
+                }
+                &:before {
+                    margin-left: 8px;
+                }
+
+                @media (hover: hover) {
+                    &:hover::before {
+                        transform: translateX(4px);
+                    }
+                }
+                &::before {
+                    background-image: url($img_path + "icon-arrow-right-button.svg");
+                    @include to(phoneL) {
+                        width: 6px;
+                    }
+                }
+            }
+        }
+    }
+    .tns-nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding: 2rem 0;
+        justify-content: center;
+        button {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            border: 1px solid map-get($colors, "secondary");
+            background-color: transparent;
+            &.tns-nav-active {
+                background-color: map-get($colors, "secondary");
+            }
+        }
+    }
+}

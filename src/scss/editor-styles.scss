@@ -1,0 +1,322 @@
+/*
+*
+* The best place for editor panel styles.
+*
+*/
+
+/*
+* Place for imported files
+*/
+@import "variables";
+@import "responsive";
+@import "extend-rules";
+@import "buttons";
+@import "grid";
+
+/*
+! After that, don't import
+* A good place for all styles that apply only to the edit panel
+*/
+
+html {
+    font-size: 10px;
+}
+:where(.editor-styles-wrapper) {
+    font-family: $font-text;
+}
+.block-description {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+.acf-block-preview {
+    min-height: 57px !important;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        padding: 10px 15px 10px;
+    }
+    p {
+        margin: 0;
+        padding: 20px 15px 10px;
+    }
+    a:not(.btn) {
+        display: block;
+        width: fit-content;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    :where(figure) {
+        margin: 0;
+    }
+    .link {
+        padding: 20px 15px;
+    }
+    .breadcrumbs,
+    .numbers-tile {
+        padding-left: 15px;
+    }
+    .subtitle {
+        padding-left: 15px;
+        margin-bottom: 15px;
+    }
+}
+.editor-styles-wrapper {
+    .edit-post-visual-editor__post-title-wrapper {
+        margin-top: 0rem;
+        margin-left: 10px;
+        margin-bottom: 1rem;
+    }
+    div[class*="wp-block-bn-"]:before,
+    .block-library-block__reusable-block-container:before {
+        content: attr(data-title);
+    }
+    .wp-block {
+        &:not(
+            .editor-post-title,
+            .block-list-appender,
+            .wp-block-bn-column
+        ) {
+            margin: 25px 15px;
+            outline: 1px dashed #b8b8b8;
+            border-radius: 3px;
+            background: #FFF;
+            &:before {
+                position: absolute;
+                top: -1px;
+                left: -1px;
+                width: max-content;
+                height: max-content;
+                padding: 0 2px;
+                background-color: #FEF900;
+                font-size: 12px;
+                font-family: Arial, serif;
+                color: #494949;
+                text-transform: capitalize;
+                letter-spacing: 0;
+                border: 1px solid #b8b8b8;
+                border-radius: 3px;
+                z-index: 1;
+            }
+        }
+        &:not(
+            .editor-post-title,
+            .block-list-appender,
+            .block-library-block__reusable-block-container,
+            .wp-block-bn-section,
+            .wp-block-bn-row,
+            .wp-block-bn-column,
+            .wp-block-bn-container,
+            .wp-block-bn-hero-slider,
+            .wp-block-bn-hero-page,
+            .wp-block-bn-text,
+            .wp-block-bn-button
+        ) {
+            margin: 15px 15px 20px;
+            &:first-child {
+                margin-top: 25px;
+            }
+        }
+        & + .block-list-appender {
+            margin-top: 5px !important;
+        }
+        &-bn {
+            &-section:before, .block-library-block__reusable-block-container:before {
+                background-color: #ECECEC !important;
+            }
+            &-row:before {
+                background-color: #C8F5E2 !important;
+            }
+            &-column.wp-block {
+                min-width: 70px;
+                margin-top: 25px;
+                margin-bottom: 25px;
+                outline: 1px solid #b8b8b8;
+                border-radius: 3px;
+                &:before {
+                    position: absolute;
+                    top: -1px;
+                    left: -1px;
+                    width: max-content;
+                    height: max-content;
+                    padding: 0 2px;
+                    background-color: #D7ECEE !important;
+                    font-size: 12px;
+                    font-family: Arial, serif;
+                    color: #494949;
+                    text-transform: capitalize;
+                    letter-spacing: 0;
+                    border: 1px solid #b8b8b8;
+                    border-radius: 3px;
+                    z-index: 1;
+                }
+            }
+            &-container:before {
+                background-color: #78C676 !important;
+            }
+            &-section,
+            &-row,
+            &-column,
+            &-container {
+                min-height: 67px;
+                outline: 1px solid #b8b8b8 !important;
+            }
+            &-section, &-column, &-container {
+                background: #f9f9f9 !important;
+            }
+            &-title {
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                span {
+                    text-shadow: 0px 0px 1px black;
+                }
+            }
+            &-text {
+                min-height: 57px !important;
+                padding: 5px 0 0;
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                p {
+                    text-shadow: 0px 0px 1px black;
+                }
+            }
+            &-img img {
+                display: block;
+                max-width: calc(100% - 30px);
+                max-height: 200px;
+                height: auto;
+                padding: 20px 15px 15px;
+            }
+            &-list ul {
+                padding: 20px 32px 15px;
+            }
+        }
+    }
+    .block-list-appender {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        margin: 25px 0 !important;
+        width: 100%;
+
+        .block-list-appender__toggle,
+        .block-editor-inserter__toggle {
+            width: 54px !important;
+            box-shadow: 0px 0px 0px 5px #007cba !important;
+            border-radius: 1px !important;
+        }
+        .block-editor-default-block-appender__content {
+            display: none !important;
+        }
+    }
+    .faq-list__tab {
+        border: 1px solid #dddddd;
+        margin: 15px 25px;
+        padding: 0 25px;
+        box-shadow: 2px 2px 3px 0px #eeeeee;
+        &:first-child {
+            margin-top: 30px;
+        }
+        &:last-child {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.acf-repeater .acf-row-handle .acf-order-input-wrap {
+    width: auto !important;
+}
+.acf-block-body .acf-block-fields .acf-tab-wrap .acf-tab-group {
+    padding: 25px 20px 0 !important;
+}
+.section__videobox, .bn-icon-box__ico svg {
+    display: none;
+}
+.interface-complementary-area,
+.interface-complementary-area__fill
+ {
+    @include from(tabletL) {
+        width: 500px !important;
+    }
+}
+.edit-post-visual-editor__content-area .is-desktop-preview {
+    padding-bottom: 15px;
+}
+// Buttons 
+.wp-block-bn-buttons .block-editor-block-list__layout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    padding: 25px 15px;
+
+    .wp-block-bn-button {
+        margin: 0 !important;
+    }
+}
+
+// Better grid and appender button implementation
+.row { 
+    & > .block-editor-inner-blocks {
+        min-width: 100%;
+        & > .block-editor-block-list__layout > .block-list-appender.wp-block {
+            position: relative;
+            // transform: translateY(50%);
+            width: 100%;
+        }
+        & > .block-editor-block-list__layout {
+            display: flex;
+            flex: 0 1 auto;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: calc(100% - 30px);
+            padding: 0 15px;
+
+
+            & > .wp-block-bn-posts-columns, & > .wp-block-bn-archive-posts, & > .wp-block-bn-horizontal-tabs {
+                width: 100%;
+                margin: 0 0 20px;
+            }
+        }
+    }
+}
+.block-editor-block-list__block.is-selected .block-editor-block-list__layout>.block-list-appender .block-editor-inserter__toggle.components-button.has-icon, .block-editor-block-list__block.is-selected .block-editor-block-list__layout>.block-list-appender .block-list-appender__toggle, .block-editor-block-list__block.is-selected>.block-list-appender .block-editor-inserter__toggle.components-button.has-icon, .block-editor-block-list__block.is-selected>.block-list-appender .block-list-appender__toggle {
+    margin: 0 auto;
+    background: #007cba;
+}
+.block-editor-inner-blocks, .block-editor-block-list__empty-block-inserter.block-editor-block-list__empty-block-inserter, .block-editor-default-block-appender .block-editor-inserter {
+    width: 100%;
+}
+.editor-styles-wrapper .block-list-appender .block-editor-inserter__toggle {
+    display: block;
+    margin: 0 auto;
+}
+.wrap {
+    margin: 0;
+}
+.col {
+    padding: 0;
+}
+
+// Dirty fix in container
+.bn-container, .faq-list, .wp-block-block, .wp-block-bn-buttons {
+    padding: 1px 0px;
+}
+
+// Hide elements of editor
+// useless Tools button from the top
+[aria-label=Tools] {
+    display: none;
+}

@@ -1,0 +1,30 @@
+/*
+*  Styles for header bottom
+*  This file is part of header.scss
+*/
+
+.header-bottom {
+    position: relative;
+    z-index: 9998;
+    background-color: #fff;
+    padding: 0 2rem;
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 0 2.5rem;
+        padding: 1.5rem 0;
+        justify-content: space-between;
+        > li:not(.--button) {
+            position: relative;
+            display: inline-block;
+            a {
+                display: inline-block;
+                transition: all 0.4s ease;
+                @extend %nav-font-small;
+                &:hover {
+                    color: map-get($colors, 'primary');
+                }
+            }
+        }
+    }
+}

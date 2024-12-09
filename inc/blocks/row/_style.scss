@@ -1,0 +1,26 @@
+.row {
+    position: relative;
+    background: {
+        size: cover;
+        position: center center;
+    }
+    &__videobox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    > * {
+        z-index: 1;
+    }
+}

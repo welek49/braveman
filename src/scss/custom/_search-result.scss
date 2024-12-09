@@ -1,0 +1,23 @@
+/*
+*
+* Styles only for search result section/page
+*
+*/
+.search-result {
+    @extend %default-padding__regular--top;
+    @extend %default-padding__regular--bottom;
+
+    &__col {
+        &--title {
+            @extend %h3;
+            @extend %default-margin__regular--bottom;
+        }
+        &--excerpt {
+            @extend %default-margin__regular--bottom;
+            @extend %excerpt-cut;
+        }
+        &--link {
+            @extend %text;
+        }
+    }
+}

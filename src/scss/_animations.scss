@@ -1,0 +1,92 @@
+/*
+*
+* Styles only for animations
+*
+*/
+
+/*
+*
+* Animations for mobile menu
+*
+*/
+
+@keyframes menu-show {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*
+*
+* Animations for faq block
+*
+*/
+@keyframes show-faq-tab {
+    from {
+        max-height: 0;
+        padding-top: 0;
+    }
+    to {
+        padding-top: var(--answer-margin);
+        max-height: 500px;
+    }
+}
+@keyframes hide-faq-tab {
+    from {
+        padding-top: var(--answer-margin);
+        max-height: 500px;
+    }
+    to {
+        max-height: 0;
+        padding-top: 0;
+    }
+}
+
+@keyframes label-in {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes showElements {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes nav-fixed-show {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes form-button-show {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

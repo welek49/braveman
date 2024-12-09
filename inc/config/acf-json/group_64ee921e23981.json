@@ -1,0 +1,255 @@
+{
+    "key": "group_64ee921e23981",
+    "title": "Block - map with locations",
+    "fields": [
+        {
+            "key": "field_64ee921e2da41",
+            "label": "General",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64ee92f936681",
+            "label": "Map with locations - countries",
+            "name": "map_with_locations_countries",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_64ee94acb51c7",
+            "button_label": "Add a country",
+            "rows_per_page": 20,
+            "acfe_repeater_stylised_button": 0,
+            "sub_fields": [
+                {
+                    "key": "field_64ee94acb51c7",
+                    "label": "Name of the country",
+                    "name": "name_of_the_country",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64ee92f936681"
+                },
+                {
+                    "key": "field_64ee933936682",
+                    "label": "Placement of the country marker on the map - horizontal",
+                    "name": "placement_horizontal",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "As a percentage shift from the left to the right of the map.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "min": 0,
+                    "max": 100,
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64ee92f936681"
+                },
+                {
+                    "key": "field_64ee93f636683",
+                    "label": "Placement of the country marker on the map - vercital",
+                    "name": "placement_vertical",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "As a percentage shift from the top to the bottom of the map.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "min": 0,
+                    "max": 100,
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64ee92f936681"
+                },
+                {
+                    "key": "field_64ee94c3b51c8",
+                    "label": "List of cities in the country",
+                    "name": "list_of_cities",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 0,
+                    "layout": "block",
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "field_64ee950ab51c9",
+                    "button_label": "Add a city",
+                    "rows_per_page": 20,
+                    "parent_repeater": "field_64ee92f936681",
+                    "acfe_repeater_stylised_button": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_64ee950ab51c9",
+                            "label": "Name of the city",
+                            "name": "name_of_the_city",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_64ee94c3b51c8"
+                        },
+                        {
+                            "key": "field_64ee9525b51ca",
+                            "label": "Address",
+                            "name": "address_of_city",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 0,
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0,
+                            "parent_repeater": "field_64ee94c3b51c8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_64ee921e2da50",
+            "label": "Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64ee921e2da56",
+            "label": "Map with locations -",
+            "name": "map_with_locations",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_63ecc893e524c"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 1,
+            "prefix_name": 1,
+            "acfe_seamless_style": 0,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "bn\/map-with-locations"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1713354554
+}

@@ -1,0 +1,107 @@
+{
+    "key": "group_6595d39649987",
+    "title": "Aos - animations",
+    "fields": [
+        {
+            "key": "field_6595d3961d544",
+            "label": "Animation type",
+            "name": "animation_name",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "fade": "fade",
+                "fade-up": "fade-up",
+                "fade-down": "fade-down",
+                "fade-left": "fade-left",
+                "fade-right": "fade-right",
+                "fade-up-right": "fade-up-right",
+                "fade-up-left": "fade-up-left",
+                "fade-down-right": "fade-down-right",
+                "fade-down-left": "fade-down-left",
+                "flip-up": "flip-up",
+                "flip-down": "flip-down",
+                "flip-left": "flip-left",
+                "flip-right": "flip-right",
+                "slide-up": "slide-up",
+                "slide-down": "slide-down",
+                "slide-left": "slide-left",
+                "slide-right": "slide-right",
+                "zoom-in": "zoom-in",
+                "zoom-in-up": "zoom-in-up",
+                "zoom-in-down": "zoom-in-down",
+                "zoom-in-left": "zoom-in-left",
+                "zoom-in-right": "zoom-in-right",
+                "zoom-out": "zoom-out",
+                "zoom-out-up": "zoom-out-up",
+                "zoom-out-down": "zoom-out-down",
+                "zoom-out-left": "zoom-out-left",
+                "zoom-out-right": "zoom-out-right"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "placeholder": "",
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "allow_custom": 0,
+            "search_placeholder": ""
+        },
+        {
+            "key": "field_6595e0d31633e",
+            "label": "Animation delay(miliseconds)",
+            "name": "animation_delay",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1710840543
+}

@@ -1,0 +1,106 @@
+.hero-slider {
+    position: relative;
+    padding: 140px 20px 120px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include from(phoneL) {
+        padding: 140px 40px;
+    }
+    @include from(tablet) {
+        padding: 140px 60px 180px;
+    }
+    @include from(laptop) {
+        padding: 200px 60px;
+        justify-content: center;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        opacity: 0.37;
+        z-index: 1;
+    }
+    &::after {
+        @include from(laptop) {
+            content: url($img_path + "home-logo-hero.webp");
+            position: absolute;
+            z-index: 0;
+            bottom: -10px;
+            right: 0;
+        }
+        @include from(laptopL) {
+            right: 60px;
+        }
+        @include from(desktopL) {
+            right: 200px;
+        }
+    }
+
+    &__video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        left: 0;
+    }
+
+    &__slides-wrapper {
+        position: relative;
+        max-width: 400px;
+        z-index: 2;
+
+        @include from(tablet) {
+            left: 60px;
+        }
+        @include from(laptop) {
+            max-width: 700px;
+        }
+        @include from(laptopL) {
+            left: 100px;
+        }
+    }
+    &__single {
+        color: #fff;
+
+        &-title {
+            @extend %h1;
+
+            margin-bottom: 20px;
+
+            @include from(phoneL) {
+                margin-bottom: 40px;
+            }
+            @include from(laptop) {
+                margin-bottom: 60px;
+            }
+        }
+        &-desc {
+            @extend %text;
+
+            margin-bottom: 20px;
+
+            @include from(phoneL) {
+                margin-bottom: 40px;
+            }
+            @include from(laptop) {
+                margin-bottom: 60px;
+            }
+        }
+        &-button {
+            @extend %btn;
+        }
+    }
+}

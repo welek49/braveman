@@ -1,0 +1,389 @@
+/*
+*
+* Styles that can be inherited in other classes
+! you can add this code to your code anywhere else, by add @extend %name
+*
+*/
+%h1 {
+    font-family: $font-headers;
+    font-weight: 600;
+    @include to(phoneL) {
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+    @include from(phoneL) {
+        font-size: 5rem;
+        line-height: 6.5rem;
+    }
+    @include from(tabletL) {
+        font-size: 6rem;
+        line-height: 7.5rem;
+    }
+    @include from(laptop) {
+        font-size: 7rem;
+        line-height: 8.5rem;
+    }
+}
+%h2 {
+    font-family: $font-headers;
+    font-weight: 600;
+    @include to(phoneL) {
+        font-size: 3rem;
+        line-height: 4.5rem;
+    }
+    @include from(phoneL) {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+    @include from(tabletL) {
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+    }
+    @include from(laptop) {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+}
+
+%h3 {
+    font-family: $font-headers;
+    font-weight: 600;
+    @include to(phoneL) {
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+    }
+    @include from(phoneL) {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+    @include from(desktop) {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+}
+
+%h4 {
+    font-family: $font-headers;
+    font-weight: 600;
+    @include to(phoneL) {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    @include from(phoneL) {
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+    }
+    @include from(desktop) {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+}
+
+%h5 {
+    font-family: $font-headers;
+    font-weight: 600;
+    @include to(phoneL) {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+    @include from(phoneL) {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    @include from(desktop) {
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+    }
+}
+
+%h6 {
+    font-family: $font-headers;
+    font-weight: 600;
+    @include to(phoneL) {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+    @include from(phoneL) {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+}
+
+%text {
+    font: {
+        family: $font-text;
+        weight: 400;
+    }
+    @include to(phoneL) {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+    @include from(phoneL) {
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
+}
+
+%text-bigger {
+    font: {
+        family: $font-text;
+        weight: 600;
+    }
+    @include to(phoneL) {
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+    }
+    @include from(phoneL) {
+        font-size: 2rem;
+        line-height: 2.7rem;
+    }
+    @include from(tabletL) {
+        font-size: 2.4rem;
+        line-height: 3.5rem;
+    }
+}
+
+%button-font {
+    font: {
+        family: $font-headers;
+    }
+    @include to(phoneL) {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+    }
+    @include from(phoneL) {
+        font-size: 2rem;
+        line-height: 2.7rem;
+    }
+}
+
+%nav-font {
+    font: {
+        family: $font-text;
+        weight: 600;
+    }
+    @include to(phoneL) {
+        font-size: 1.9rem;
+        line-height: 2.3rem;
+    }
+    @include from(phoneL) {
+        font-size: 1.9rem;
+        line-height: 2.3rem;
+    }
+    &-small {
+        font: {
+            family: $font-text;
+            weight: 600;
+        }
+        @include to(phoneL) {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+        @include from(phoneL) {
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
+    }
+    &-footer {
+        font: {
+            family: $font-text;
+            weight: 400;
+        }
+        @include to(phoneL) {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+        @include from(phoneL) {
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
+    }
+}
+
+%copyright-font {
+    font: {
+        family: $font-text;
+        weight: 300;
+    }
+    @include to(phoneL) {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+    }
+    @include from(phoneL) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+%default-margin {
+    &__small {
+        &--top {
+            margin-top: $default-small-space-mobile;
+            @include from(phoneL) {
+                margin-top: $default-small-space;
+            }
+        }
+        &--bottom {
+            margin-bottom: $default-small-space-mobile;
+            @include from(phoneL) {
+                margin-bottom: $default-small-space;
+            }
+        }
+    }
+    &__regular {
+        &--top {
+            margin-top: $default-regular-space-mobile;
+            @include from(phoneL) {
+                margin-top: $default-regular-space;
+            }
+        }
+        &--bottom {
+            margin-bottom: $default-regular-space-mobile;
+            @include from(phoneL) {
+                margin-bottom: $default-regular-space;
+            }
+        }
+    }
+    &__medium {
+        &--top {
+            margin-top: $default-medium-space-mobile;
+            @include from(phoneL) {
+                margin-top: $default-medium-space;
+            }
+        }
+        &--bottom {
+            margin-bottom: $default-medium-space-mobile;
+            @include from(phoneL) {
+                margin-bottom: $default-medium-space;
+            }
+        }
+    }
+    &__big {
+        &--top {
+            margin-top: $default-big-space-mobile;
+            @include from(phoneL) {
+                margin-top: $default-big-space;
+            }
+        }
+        &--bottom {
+            margin-bottom: $default-big-space-mobile;
+            @include from(phoneL) {
+                margin-bottom: $default-big-space;
+            }
+        }
+    }
+}
+
+%default-padding {
+    &__small {
+        &--top {
+            padding-top: $default-small-space-mobile;
+            @include from(phoneL) {
+                padding-top: $default-small-space;
+            }
+        }
+        &--bottom {
+            padding-bottom: $default-small-space-mobile;
+            @include from(phoneL) {
+                padding-bottom: $default-small-space;
+            }
+        }
+    }
+    &__regular {
+        &--top {
+            padding-top: $default-regular-space-mobile;
+            @include from(phoneL) {
+                padding-top: $default-regular-space;
+            }
+        }
+        &--bottom {
+            padding-bottom: $default-regular-space-mobile;
+            @include from(phoneL) {
+                padding-bottom: $default-regular-space;
+            }
+        }
+    }
+    &__medium {
+        &--top {
+            padding-top: $default-medium-space-mobile;
+            @include from(phoneL) {
+                padding-top: $default-medium-space;
+            }
+        }
+        &--bottom {
+            padding-bottom: $default-medium-space-mobile;
+            @include from(phoneL) {
+                padding-bottom: $default-medium-space;
+            }
+        }
+    }
+    &__big {
+        &--top {
+            padding-top: $default-big-space-mobile;
+            @include from(phoneL) {
+                padding-top: $default-big-space;
+            }
+        }
+        &--bottom {
+            padding-bottom: $default-big-space-mobile;
+            @include from(phoneL) {
+                padding-bottom: $default-big-space;
+            }
+        }
+    }
+}
+
+%excerpt-cut {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines-excerpt-cut;
+    -webkit-box-orient: vertical;
+}
+
+/*
+*
+* Mixin : Add a hover to everything but with a switch for nesting
+*
+*/
+@mixin hover($same: 0) {
+    @if $same == "same" {
+        //switch for nesting
+        @media (hover: hover) {
+            &:hover & {
+                @content;
+            }
+        }
+    } @else {
+        //for other cases
+        @media (hover: hover) {
+            &:hover {
+                @content;
+            }
+        }
+    }
+}
+
+/*
+*
+* Add line for links
+*
+*/
+%background-line-link {
+    &__primary {
+        padding-bottom: 3px;
+        transition: all 0.4s ease;
+        background: linear-gradient(transparent calc(100% - 1px), map-get($colors, 'primary') 10px) 0 0/0% 100% no-repeat;
+        @include hover {
+            background-size: 100% 100%;
+        }
+    }
+    &__light {
+        padding-bottom: 3px;
+        transition: all 0.4s ease;
+        background: linear-gradient(transparent calc(100% - 1px), map-get($colors, 'light') 10px) 0 0/0% 100% no-repeat;
+        @include hover {
+            background-size: 100% 100%;
+        }
+    }
+}

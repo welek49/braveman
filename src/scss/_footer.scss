@@ -1,0 +1,104 @@
+/*
+*
+* Styles only for footer
+! adapt that styles to the project
+*
+*/
+
+.footer {
+    background-color: #232a35;
+    padding-top: 4rem;
+    span,
+    p,
+    a {
+        @extend %nav-font-footer;
+    }
+    ul {
+        list-style: none;
+        li {
+            color: #fff;
+            padding-bottom: 10px;
+            &.--button {
+                display: flex;
+                align-items: center;
+                a {
+                    @extend %btn;
+                    background-color: map-get($colors, 'primary');
+                    color: map-get($colors, 'secondary');
+                    @media (hover: hover) {
+                        &:hover {
+                            color: map-get($colors, 'secondary');
+                            background-color: map-get($colors, 'primary');
+                        }
+                    }
+                }
+            }
+            a {
+                @extend %nav-font-footer;
+                @extend %background-line-link__light;
+                opacity: 0.7;
+                transition: all 0.4s ease;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__logo {
+        display: block;
+        margin-bottom: 2rem;
+        @extend %h5;
+        object {
+            max-width: 100%;
+        }
+    }
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 3.5rem;
+        @include to(tablet) {
+            justify-content: center;
+        }
+        a {
+            width: 23px;
+            height: 18px;
+            opacity: 0.8;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+            max-height: 18px;
+            fill: map-get($colors, 'light');
+        }
+    }
+    &__header {
+        display: block;
+        @extend %h5;
+        color: #fff;
+        &.--empty {
+            @include to(tablet) {
+                margin: 0;
+            }
+            @include from(tablet) {
+                min-height: 35px;
+            }
+        }
+    }
+    &__copyrights {
+        @extend %copyright-font;
+        color: #fff;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        margin-top: 4rem;
+        opacity: 0.7;
+    }
+    &__column {
+        color: #fff;
+        @include to(tablet) {
+            text-align: center;
+            justify-content: center;
+        }
+    }
+}

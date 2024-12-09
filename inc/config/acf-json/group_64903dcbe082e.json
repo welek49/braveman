@@ -1,0 +1,46 @@
+{
+    "key": "group_64903dcbe082e",
+    "title": "Page option",
+    "fields": [
+        {
+            "key": "field_64903dcd1d79c",
+            "label": "Menu position",
+            "name": "menu_position",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Absolute",
+            "ui_off_text": "Static",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1693497983,
+    "acfml_field_group_mode": "advanced"
+}

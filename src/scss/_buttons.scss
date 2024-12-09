@@ -1,0 +1,92 @@
+/*
+*
+* Styles only for buttons
+*
+*/
+
+%btn {
+    position: relative;
+    display: inline-block;
+    @extend %button-font;
+    transition: all 0.2s ease;
+    background-color: transparent;
+    cursor: pointer;
+    @include to(phoneL) {
+        padding: 15px 25px;
+    }
+    @include from(phoneL) {
+        padding: 15px 25px;
+    }
+    border: 2px solid transparent;
+    @media (hover: hover) {
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+.btn-flat {
+    &-primary {
+        @extend %btn;
+        background-color: map-get($colors, 'primary');
+        color: map-get($colors, 'secondary');
+        @media (hover: hover) {
+            &:hover {
+                color: map-get($colors, 'secondary');
+            }
+        }
+    }
+    &-secondary {
+        @extend %btn;
+        background-color: map-get($colors, 'secondary');
+        color: map-get($colors, 'light');
+        @media (hover: hover) {
+            &:hover {
+                color: map-get($colors, 'light');
+            }
+        }
+    }
+
+    &-light {
+        @extend %btn;
+        background-color: map-get($colors, 'light');
+        color: map-get($colors, 'secondary');
+        @media (hover: hover) {
+            &:hover {
+                color: map-get($colors, 'secondary');
+            }
+        }
+    }
+}
+
+.btn-border {
+    &-primary {
+        @extend %btn;
+        color: map-get($colors, 'primary');
+        border-color: map-get($colors, 'primary');
+        @media (hover: hover) {
+            &:hover {
+                color: map-get($colors, 'primary');
+            }
+        }
+    }
+    &-secondary {
+        @extend %btn;
+        color: map-get($colors, 'secondary');
+        border-color: map-get($colors, 'secondary');
+        @media (hover: hover) {
+            &:hover {
+                color: map-get($colors, 'secondary');
+            }
+        }
+    }
+    &-light {
+        @extend %btn;
+        color: map-get($colors, 'light');
+        border-color: map-get($colors, 'light');
+        @media (hover: hover) {
+            &:hover {
+                color: map-get($colors, 'light');
+            }
+        }
+    }
+}

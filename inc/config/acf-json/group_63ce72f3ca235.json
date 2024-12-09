@@ -1,0 +1,93 @@
+{
+    "key": "group_63ce72f3ca235",
+    "title": "Theme options - social media",
+    "fields": [
+        {
+            "key": "field_63ce72f4d1fc2",
+            "label": "Facebook",
+            "name": "facebook_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Add link to your account.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/facebook.com"
+        },
+        {
+            "key": "field_63ce733ad1fc3",
+            "label": "Instagram",
+            "name": "instagram_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Add link to your account.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/instagram.com"
+        },
+        {
+            "key": "field_63ce7355d1fc4",
+            "label": "LinkedIn",
+            "name": "linkedin_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Add link to your account.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/linkedin.com"
+        },
+        {
+            "key": "field_63ce7366d1fc5",
+            "label": "Youtube",
+            "name": "youtube_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Add link to your account.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/youtube.com"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-social-media"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1674474530
+}

@@ -1,0 +1,108 @@
+.person-slider {
+    padding: 0 6rem;
+
+    @include from(desktopL) {
+        padding: 0;
+    }
+    &__wrapper {
+        position: relative;
+    }
+    &__slides {
+        display: flex;
+        &--slide {
+        }
+    }
+    .tns-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+
+        @include from(phoneL) {
+            margin-top: 0;
+        }
+
+        button {
+            background: none;
+            border: 1px solid map-get($colors, 'secondary');
+            border-radius: 50%;
+            display: flex;
+            height: 4rem;
+            width: 4rem;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include from(phoneL) {
+                width: 60px;
+                height: 60px;
+            }
+
+            &:nth-child(1) {
+                left: -60px;
+
+                @include from(phoneL) {
+                    left: -70px;
+                }
+                @include from(tablet) {
+                    left: -80px;
+                }
+                @include from(desktopL) {
+                    left: -140px;
+                }
+
+                @media (hover: hover) {
+                    &:hover::before {
+                        transform: translateX(-4px);
+                    }
+                }
+                &::before {
+                    content: url($img_path + "icon-arrow-left-button.svg");
+                    transition: 0.4s ease-out;
+                }
+            }
+            &:nth-child(2) {
+                right: -60px;
+
+                @include from(phoneL) {
+                    right: -70px;
+                }
+                @include from(tablet) {
+                    right: -80px;
+                }
+                @include from(desktopL) {
+                    right: -140px;
+                }
+
+                @media (hover: hover) {
+                    &:hover::before {
+                        transform: translateX(4px);
+                    }
+                }
+                &::before {
+                    content: url($img_path + "icon-arrow-right-button.svg");
+                    transition: 0.4s ease-out;
+                }
+            }
+        }
+    }
+    .tns-nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding: 2rem 0;
+        justify-content: center;
+        button {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            border: 1px solid map-get($colors, 'secondary');
+            background-color: transparent;
+            &.tns-nav-active {
+                background-color: map-get($colors, 'secondary');
+            }
+        }
+    }
+}

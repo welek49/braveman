@@ -1,0 +1,232 @@
+%pin-style {
+    border-radius: 100%;
+    box-shadow: inset 2px 2px 7px rgba(0,0,0,0.27);
+    background: map-get($colors, 'primary');
+    position: absolute;
+    left: -7px;
+    top: -7px;
+    width: 14px;
+    height: 14px;
+    transform: translate(-50%, -50%);
+    animation: pulse;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: block;
+
+    &:hover {
+        left: -7px;
+        top: -7px;
+        width: 14px;
+        height: 14px;
+    }
+
+    @include from(tablet) {
+        left: -8px;
+        top: -8px;
+        width: 16px;
+        height: 16px;
+
+        &:hover {
+            left: -12px;
+            top: -12px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.map-with-locations {
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+
+    &__map {
+        position: relative;
+
+        img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0
+        }
+    }
+
+    &__glow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(0,0);
+    }
+
+    &__pins {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    &__pin {
+        position: absolute;
+        &:after{
+            content: '';
+            @extend %pin-style;
+        }
+    }
+
+    &__locations {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: none;
+
+        @include from(tablet) {
+            display: block;
+        }
+
+        &--mobile {
+            color: $font-color;
+            display: block;
+
+            @include from(tablet) {
+                display: none;
+            }
+        }
+    }
+
+    &__locations-list {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        text-align: center;
+        list-style: none;
+    }
+
+    &__open-button {
+        max-width: max-content;
+        display: block;
+        margin: 1rem auto 0;
+    }
+
+    &__location {
+        position: absolute;
+        &:after{
+            content: '';
+            @extend %pin-style;
+            transition: 0.3s ease-in-out;
+        }
+
+        &:hover {
+            .map-with-locations__country {
+                opacity: 1;
+                pointer-events: all;
+                touch-action: auto;
+                top: 35px;
+            }
+        }
+
+        &--mobile {
+            font-size: 1.4rem;
+
+            a {
+                font: inherit;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__country {
+        background: map-get($colors, 'light');
+        border: 1px solid #FFF;
+        border-radius: 5px;
+        position: relative;
+        width: max-content;
+        position: absolute;
+        left: 0;
+        top: 45px;
+        transform: translateX(-50%);
+        box-shadow: 4px 20px 34px rgba(0,0,0,0.12);
+        transition: 0.3s ease-in-out;
+        min-width: 15rem;
+        text-align: center;
+        opacity: 0;
+        pointer-events: none;
+        touch-action: none;
+
+        &:before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            background: inherit;
+            transform:   translate(-5px, -6px) rotateZ(45deg) skew(11deg, 11deg) ; //
+            border: inherit;
+            border-right: none;
+            border-bottom: none;
+            z-index: 0;
+        }
+
+        &:after {
+            content: '';
+            width: 100%;
+            height: 30px;
+            display: block;
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+        }
+    }
+
+    &__country-name {
+        z-index: 1000;
+        padding: 0.7rem 1.5rem;
+        font-size: 2.8rem;
+    }
+
+    &__cities {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+    }
+
+    &__city {
+        padding: 0.5rem 1.5rem;
+        &:first-child {
+            padding-top: 1.2rem;
+        }
+        &:last-child {
+            padding-bottom: 1.2rem;
+        }
+
+        a {
+            font-size: inherit;
+            text-decoration: underline;
+        }
+    }
+}

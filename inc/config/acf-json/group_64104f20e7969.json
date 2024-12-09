@@ -1,0 +1,103 @@
+{
+    "key": "group_64104f20e7969",
+    "title": "Theme options - popup",
+    "fields": [
+        {
+            "key": "field_64104f495b3ee",
+            "label": "Title",
+            "name": "popup_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Add title to your popup",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64104f535b3ef",
+            "label": "Text",
+            "name": "popup_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Add title to your popup",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 5,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_64104f625b3f0",
+            "label": "Button",
+            "name": "popup_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Add button to your popup",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_641050f8ce099",
+            "label": "Status",
+            "name": "popup_status",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-popup"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1693497983,
+    "local_file": "\/Users\/mateuszdzida\/Desktop\/TTMS\/ttms_WORK\/local\/app\/public\/wp-content\/themes\/ttms\/inc\/config\/acf-json\/group_64104f20e7969.json",
+    "acfml_field_group_mode": "advanced"
+}

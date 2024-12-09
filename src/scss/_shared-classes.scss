@@ -1,0 +1,198 @@
+/*
+*
+* Styles with repeating, reusable classes
+! that don't belong to any block only or larger element
+! or are used in blocks as switches
+*/
+
+/*
+* Adds styles that disabled block
+*/
+body:not(.logged-in) .hide_for_unlogged, .logged-in .hide_for_logged {
+    display: none;
+}
+/*
+* Adds styles of normal text
+*/
+.text {
+    @extend %text;
+}
+/*
+* Adds styles of bigger text
+*/
+.text-bigger {
+    @extend %text-bigger;
+}
+/*
+* Adds styles of normal link
+*/
+.link {
+    @extend %text;
+    text-decoration: underline;
+}
+
+/*
+* Adds styles to group of buttons
+*/
+.buttons-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 5rem;
+    @include to(phoneL) {
+        justify-content: center;
+    }
+}
+/*
+* Adds styles that shorten the text to X lines
+*/
+.excerpt-cut {
+    @extend %excerpt-cut;
+}
+
+/*
+* Adds styles with default margin and padding
+*/
+.default-margin {
+    &__small {
+        &--top {
+            @extend %default-margin__small--top;
+        }
+        &--bottom {
+            @extend %default-margin__small--bottom;
+        }
+    }
+    &__regular {
+        &--top {
+            @extend %default-margin__regular--top;
+        }
+        &--bottom {
+            @extend %default-margin__regular--bottom;
+        }
+    }
+    &__medium {
+        &--top {
+            @extend %default-margin__medium--top;
+        }
+        &--bottom {
+            @extend %default-margin__medium--bottom;
+        }
+    }
+    &__big {
+        &--top {
+            @extend %default-margin__big--top;
+        }
+        &--bottom {
+            @extend %default-margin__big--bottom;
+        }
+    }
+}
+.default-padding {
+    &__small {
+        &--top {
+            @extend %default-padding__small--top;
+        }
+        &--bottom {
+            @extend %default-padding__small--bottom;
+        }
+    }
+    &__regular {
+        &--top {
+            @extend %default-padding__regular--top;
+        }
+        &--bottom {
+            @extend %default-padding__regular--bottom;
+        }
+    }
+    &__medium {
+        &--top {
+            @extend %default-padding__medium--top;
+        }
+        &--bottom {
+            @extend %default-padding__medium--bottom;
+        }
+    }
+    &__big {
+        &--top {
+            @extend %default-padding__big--top;
+        }
+        &--bottom {
+            @extend %default-padding__big--bottom;
+        }
+    }
+}
+
+/*
+* Adds responsive table styles
+*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    td,
+    th {
+        border: 1px solid map-get($colors, 'primary');
+        padding: 8px;
+    }
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: map-get($colors, 'primary');
+        color: map-get($colors, 'secondary');
+    }
+    td {
+        font-weight: 400;
+    }
+}
+
+.bn-table,
+.wp-block-table {
+    overflow-x: auto;
+    table {
+        th {
+            min-width: 150px;
+        }
+    }
+}
+
+/*
+* Adds scroll stoper for mobile navigation
+*/
+.--scroll-disabled {
+    overflow: hidden;
+}
+/*
+*
+* For animation purpose
+*
+*/
+.show-on,
+.show-on__after {
+    opacity: 0;
+}
+
+.show-on.in-view {
+    animation: showElements 0.6s 0.1s ease-in-out forwards;
+}
+
+.show-on__after.in-view {
+    animation: showElements 0.6s 0.1s ease-in-out forwards;
+}
+
+/*
+*
+* For single post
+*
+*/
+.bn-single-post-hero {
+    background-size: cover;
+    background-position: center center;
+    min-height: 200px;
+    @include from(phoneL) {
+        min-height: 200px;
+        height: 40vh;
+    }
+    @include from(tabletL) {
+        min-height: 400px;
+        height: 50vh;
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "bn/logotypes-list",
+    "title": "Logotypes list",
+    "description": "This block shows logotypes list. Each logotype can be a link.",
+    "style": [
+        "file:./style.css"
+    ],
+    "category": "content",
+    "icon": "<svg width='385.919' height='294.865' viewBox='0 0 385.919 294.865'><g transform='translate(-550.398 464.827)'><path d='M931.519-417.279H711.36a4.8,4.8,0,0,0-4.8,4.8v12.8a4.8,4.8,0,0,0,4.8,4.8h220.16a4.8,4.8,0,0,0,4.8-4.8v-12.8a4.8,4.8,0,0,0-4.8-4.8' fill='#40b83c' fill-rule='evenodd'/><path d='M755.84-244.8H555.2a4.8,4.8,0,0,0-4.8,4.8v12.8a4.8,4.8,0,0,0,4.8,4.8H755.84a4.8,4.8,0,0,0,4.8-4.8V-240a4.8,4.8,0,0,0-4.8-4.8' fill='#40b83c' fill-rule='evenodd'/><g transform='translate(536.785 -348.571)'><path d='M61.239-71.249q7.09,0,10.752-3.115t3.662-9.188q0-6-3.662-9.11-3.662-3.193-10.752-3.193h-16.6v24.606ZM62.252-20.4q9.038,0,13.557-3.815,4.6-3.815,4.6-11.524,0-7.553-4.519-11.291-4.519-3.815-13.635-3.815H44.644V-20.4ZM90.145-62.216A26.691,26.691,0,0,1,105.1-51.86q5.3,7.553,5.3,18.532,0,16.819-11.375,25.073T64.434,0H14.648V-116.256H59.681q24.231,0,35.061,7.32,10.908,7.32,10.908,23.438a25.623,25.623,0,0,1-3.974,14.483,23.474,23.474,0,0,1-11.531,8.8Z' fill='#2b2929'/></g><g transform='translate(808.454 -169.962)'><path d='M14.648-116.256h33.5L90.457-36.52v-79.736h28.438V0h-33.5L43.086-79.736V0H14.648Z' fill='#2b2929'/></g></g></svg>",
+    "keywords": [
+        "partners",
+        "logotype",
+        "logo",
+        "logotypes",
+        "list"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "template.php",
+        "blockVersion": "1"
+    },
+    "supports": {
+        "align": false
+    },
+    "example": {
+        "attributes": {
+            "data" : {
+                "preview_image": "true"
+            }
+        }
+    }
+}

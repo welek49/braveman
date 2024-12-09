@@ -1,0 +1,80 @@
+/*
+*  Styles for pagination
+*/
+
+.bn-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0 3rem;
+    margin-top: 2rem;
+    @include from(tablet) {
+        gap: 0 5rem;
+    }
+    &__numbers {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+    &__prev,
+    &__next {
+        position: relative;
+        &:hover {
+            &:before {
+                border-color: map-get($colors, 'light');
+            }
+        }
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition: 0.4s ease-in-out;
+            width: 0.8rem;
+            height: 0.8rem;
+            border: {
+                top: 2px solid map-get($colors, 'secondary');
+                left: 2px solid map-get($colors, 'secondary');
+                right: none;
+                bottom: none;
+            }
+            pointer-events: none;
+        }
+    }
+    &__prev {
+        &:before {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+    &__next {
+        &:before {
+            transform: translate(-50%, -50%) rotate(135deg);
+        }
+    }
+    .page-numbers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.8rem;
+        height: 4.8rem;
+        border: 2px solid map-get($colors, 'secondary');
+        font: {
+            size: 2rem;
+            weight: 600;
+        }
+        line-height: 2.4rem;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+            background-color: map-get($colors, 'secondary');
+            color: map-get($colors, 'light');
+        }
+        @include from(tablet) {
+            width: 6.3rem;
+            height: 6.3rem;
+        }
+    }
+    .current {
+        background-color: map-get($colors, 'secondary');
+        color: map-get($colors, 'light');
+    }
+}

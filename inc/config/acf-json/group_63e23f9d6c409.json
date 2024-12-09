@@ -1,0 +1,153 @@
+{
+    "key": "group_63e23f9d6c409",
+    "title": "Block - partners list",
+    "fields": [
+        {
+            "key": "field_63e23f9dd515a",
+            "label": "General",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_63e23fe1edfe9",
+            "label": "Logotypes",
+            "name": "logotypes",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 1,
+            "rows_per_page": 20,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_63e2401aedfea",
+                    "label": "Logo",
+                    "name": "logo",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_63e23fe1edfe9"
+                },
+                {
+                    "key": "field_63e24027edfeb",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_63e23fe1edfe9"
+                }
+            ]
+        },
+        {
+            "key": "field_63e23f9de7eed",
+            "label": "Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_63ecca2607348_field_63ecc893e524c",
+            "label": "Partners list Block visibility",
+            "name": "partners_list_block_visibility",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Check this box if you want to hide this block",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Hidden",
+            "ui_off_text": "Visible",
+            "ui": 1,
+            "_clone": "field_63ecca2607348",
+            "__key": "field_63ecc893e524c",
+            "__name": "block_visibility",
+            "__label": "Block visibility"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "bn\/partners-list"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1693497983,
+    "local_file": "\/Users\/mateuszdzida\/Desktop\/TTMS\/ttms_WORK\/local\/app\/public\/wp-content\/themes\/ttms\/inc\/config\/acf-json\/group_63e23f9d6c409.json",
+    "acfml_field_group_mode": "advanced"
+}

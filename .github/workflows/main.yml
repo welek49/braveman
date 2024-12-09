@@ -1,0 +1,38 @@
+#
+#
+# This is a template workflow to help you get started with Actions
+# You have to edit few things
+# Remember to move this file to .github/workflows after creating the git project
+#
+
+name: Deployment to staging
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run dev-build
+
+      - name: Deploy to server
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: ./domains/pawelbaczynski.pl/public_html/braveman/wp-content/themes/braveman/
+          protocol: 'ftp'

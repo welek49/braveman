@@ -1,0 +1,139 @@
+/*
+* Styles only for testimonials slider block
+*/
+.testimonials-slider {
+    position: relative;
+    @include from(laptop) {
+        padding: 0 6.5rem;
+    }
+    &__slide {
+        display: grid;
+        grid-template-areas:
+            "testimonial testimonial"
+            "image author";
+        gap: 4rem 2rem;
+        align-items: center;
+
+        @include from(laptop) {
+            grid-template-areas:
+                "image testimonial"
+                "image author";
+            gap: 3rem 4rem;
+        }
+
+        &-image {
+            position: relative;
+            display: inline-block;
+            grid-area: image;
+            width: fit-content;
+            justify-self: flex-end;
+            width: 7rem;
+            height: 7rem;
+
+            @include from(laptop) {
+                width: 20rem;
+                height: 20rem;
+            }
+            &--ico {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 3.6rem;
+                height: 2.5rem;
+                @include from(laptop) {
+                    width: 7.2rem;
+                    height: 5rem;
+                }
+            }
+            &--frame {
+                width: 7rem;
+                height: 7rem;
+                overflow: hidden;
+                @include from(laptop) {
+                    width: 20rem;
+                    height: 20rem;
+                }
+            }
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &-author {
+            grid-area: author;
+        }
+        &-text {
+            text-align: center;
+            font-style: italic;
+            grid-area: testimonial;
+            @include from(laptop) {
+                text-align: left;
+            }
+        }
+        &-name {
+            @extend %h4;
+        }
+        &-position {
+            // change font position
+        }
+    }
+    .tns-controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+        @include from(laptop) {
+            margin-top: 0;
+        }
+        button {
+            background-color: map-get($colors, 'secondary');
+            width: 6rem;
+            height: 6rem;
+            border: none;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin: 0 10px;
+
+            @include from(laptop) {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                margin: 0;
+            }
+
+            &::before {
+                content: "";
+                width: 2.2rem;
+                height: 100%;
+                background: {
+                    image: url($img-path + "icon-arrow-white.svg");
+                    size: contain;
+                    position: center center;
+                    repeat: no-repeat;
+                }
+            }
+
+            &:nth-child(1) {
+                @include from(laptop) {
+                    left: 0;
+                }
+                &::before {
+                    transform: rotate(180deg);
+                }
+            }
+            &:nth-child(2) {
+                @include from(laptop) {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
