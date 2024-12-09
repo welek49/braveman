@@ -35,4 +35,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
           server-dir: ./domains/pawelbaczynski.pl/public_html/braveman/wp-content/themes/braveman/
-          protocol: 'sftp'
+          protocol: 'ftps'
