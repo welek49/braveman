@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -28,11 +28,11 @@ jobs:
         run: npm run dev-build
 
       - name: Deploy to server
-        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+        uses: SamKirkland/FTP-Deploy-Action@4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: ./domains/pawelbaczynski.pl/public_html/braveman/wp-content/themes/braveman/
-          protocol: 'ftps'
+          server-dir: /domains/pawelbaczynski.pl/public_html/braveman/wp-content/themes/braveman/
+          protocol: 'ftp'
