@@ -9,6 +9,7 @@ function bn_styles_and_scripts()
 
     wp_enqueue_style( 'bn-styles', get_template_directory_uri() . '/dist/css/main.css', array(), VER );
     wp_enqueue_script('bn-script', get_template_directory_uri() . '/dist/js/main.min.js', array(), VER, true);
+    wp_enqueue_script('tweenMax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js', array(), null, true);
     wp_enqueue_style( 'aos-animations', 'https://unpkg.com/aos@2.3.1/dist/aos.css', null, array(), false);
     wp_enqueue_script('aos-animations-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js', ['jquery'], null, false);
     wp_enqueue_script('google-script', 'https://maps.googleapis.com/maps/api/js?key=' . $api . '&callback=Function.prototype', [], null, true);

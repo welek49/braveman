@@ -19,6 +19,7 @@ const { navFixed } = require("./modules/nav-fixed");
 const { contentFolding } = require("./modules/content-folding");
 const { readMore } = require("./modules/read-more");
 const { logotypesList } = require("./modules/logotypes-list");
+const { sparks } = require("./modules/sparks");
 
 document.addEventListener("DOMContentLoaded", () => {
     /* Add exported functions here, will be loaded after dom */
@@ -47,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navFixed();
     readMore();
     logotypesList();
+    sparks();
     contentFolding(
         "map-with-locations__locations--mobile",
         "map-with-locations__locations-list",
