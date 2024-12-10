@@ -22,8 +22,6 @@
 @import "grid"; // Styles only for greed created by Brave New
 @import "buttons"; // Styles only for buttons
 @import "shared-classes"; // Styles with repeating, reusable classes
-@import "custom-classes"; // Styles with repeating, rather short, reusable custom classes (only to this particular theme)
-
 @import "header"; // Styles only for header
 @import "footer"; // Styles only for footer
 
@@ -41,8 +39,10 @@
 *
 */
 
+@import "custom-classes"; // Styles with repeating, rather short, reusable custom classes (only to this particular theme)
 @import "custom/custom-post-type-box"; // Styles for cookies bar
 @import "custom/pagination"; // Styles for pagination
 @import "custom/search-result"; // Styles for search result page
 @import "custom/popup"; // Styles for popup window
 @import "custom/cookies"; // Styles for cookies bar
+@import "custom/form"; // Styles for form

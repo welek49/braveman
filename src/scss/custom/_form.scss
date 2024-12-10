@@ -1,0 +1,121 @@
+.wpcf7-form {
+    label {
+        display: block;
+        padding-top: 10px;
+    }
+    input,
+    textarea {
+        padding: 15px 25px;
+        border: 1px solid #9c9c9c;
+        background: #D9D9D9;
+        border-radius: 5px;
+        margin-top: 0.5rem;
+        width: 100%;
+        font-family: inherit;
+        @include from(laptop) {
+        }
+        @include to(tablet) {
+            padding: 0.9rem 1.4rem;
+        }
+    }
+    input[type="submit"] {
+        font-size: 18px;
+        width: auto;
+        margin: 10px 0 20px;
+        appearance: none;
+        border: none;
+        cursor: pointer;
+        @include to(tablet) {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    label {
+        color: #FFF;
+        br {
+            display: none;
+        }
+    }
+    label.input[type="checkbox"] {
+        visibility: hidden;
+    }
+    .wpcf7-list-item {
+        margin: 0;
+        padding-top: 2rem;
+        input[type="checkbox"] {
+            display: none;
+        }
+        label {
+            position: relative;
+            padding: 0;
+
+            .wpcf7-list-item-label {
+                padding-left: 3rem;
+                font-size: 16px;
+                line-height: 29px;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 6px;
+                    left: 0;
+                    width: 2rem;
+                    height: 2rem;
+                    border: 1px solid #9c9c9c;
+                    border-radius: 0.5rem;
+                }
+                a {
+                    font-size: 1.4rem;
+                    line-height: 2.5rem;
+                    text-decoration: underline;
+                    @include to(tablet) {
+                        font-size: 1rem;
+                        line-height: 2;
+                    }
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        input[type="checkbox"]:checked + .wpcf7-list-item-label::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1.6rem;
+            height: 1.6rem;
+            background: map-get($colors, "primary");
+            margin: 0.2rem;
+            border-radius: 0.5rem;
+        }
+    }
+    .wpcf7-response-output {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 15px 30px;
+        border-radius: 8px;
+        border-width: 1px;
+        font-size: 1.4rem;
+        text-shadow: 1px 1px 0 #fff;
+    }
+    &.sent {
+        .wpcf7-response-output {
+            background-color: #46b45020;
+            color: #46b450;
+        }
+    }
+    &.invalid {
+        .wpcf7-response-output {
+            background-color: #ffb90020;
+            color: #dca307;
+        }
+    }
+    &.failed {
+        .wpcf7-response-output {
+            background-color: #dc323220;
+            color: red;
+        }
+    }
+}

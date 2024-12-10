@@ -2,6 +2,8 @@
 
 $header_logo = get_field('header_logo', 'option') ? get_field('header_logo', 'option') : null;
 $menu_position = get_field('menu_position') ? get_field('menu_position') : null;
+$facebook = get_field('facebook_link', 'option') ? get_field('facebook_link', 'option') : null;
+$instagram = get_field('instagram_link', 'option') ? get_field('instagram_link', 'option') : null;
 
 if (is_singular('post')) {
     $menu_position = true;
@@ -25,7 +27,7 @@ if (is_singular('post')) {
             <div class="header__content--left">
                 <a href="<?= get_home_url() ?>" class="header__logo">
                     <?php if ($header_logo) : ?>
-                        <object data="<?= $header_logo['url'] ?>" type="image/svg+xml"><?= $header_logo['title'] ?></object>
+                        <img src="<?= $header_logo['url'] ?>" alt="Logo <?= get_home_url() ?>"/>
                     <?php else : ?>
                         LOGO
                     <?php endif ?>
@@ -46,13 +48,19 @@ if (is_singular('post')) {
                         ));
                     }
                     ?>
-
-                    <?php //uncomment for showing flags(wpml)
-                    //<div class="header__nav--switch">
-                    //do_shortcode("[wpml_language_switcher type='custom' flags=1 native=0 translated=0][/wpml_language_switcher]")
-                    //</div>
-                    ?>
                 </nav>
+                <div class="header__social">
+                    <?php if ($facebook) : ?>
+                        <a href="<?= $facebook ?>" target="_blank"><svg>
+                                <use href="#facebook" />
+                            </svg></a>
+                    <?php endif;
+                    if ($instagram) : ?>
+                        <a href="<?= $instagram ?>" target="_blank"><svg>
+                                <use href="#instagram" />
+                            </svg></a>
+                    <?php endif; ?>
+                </div>
                 <?php
                 /*
                 *

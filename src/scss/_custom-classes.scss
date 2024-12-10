@@ -16,11 +16,17 @@
     }
 }
 
-.home-page-hero {
-    height: 100vh;
-    background-image: url('./wp-content/uploads/2024/12/braveman-hero-img.png');
-    background-size: contain;
+.section.home-page-hero {
+    position: relative;
+    height: calc(100vh - 100px);
+    background-size: auto 100%;
     background-repeat: no-repeat;
-    background-position: 100%;
-    //clip-path: path('M0 0 L0 1000 L950 500 L1600 500 L1600 0 L880 0 L800 50 L0 50 Z');
+    background-position: right;
+    margin-top: 100px;
+    max-height: 700px;
+}
+.home-page-hero + figure {
+    position: relative;
+    z-index: 1;
+    margin-top: -30px;
 }
