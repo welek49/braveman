@@ -9,9 +9,7 @@ export const readMore = () => {
 
     if (readMoreElements.length > 0) {
         readMoreElements.forEach(function (element) {
-            const initialHeight = element.classList.contains("read-more")
-                ? `${heightReadMore}px`
-                : "25px";
+            const initialHeight = element.classList.contains("read-more") ? `${heightReadMore}px` : "25px";
             element.style.maxHeight = initialHeight;
             element.style.overflow = "hidden";
             element.style.transition = "max-height 0.5s ease";

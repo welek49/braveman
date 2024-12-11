@@ -1,0 +1,6 @@
+.bn-container {
+    padding: 1.5rem;
+    @include from(tablet) {
+        padding: 2.5rem;
+    }
+}

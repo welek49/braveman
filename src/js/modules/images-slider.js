@@ -13,11 +13,14 @@ export const imagesSliderInit = () => {
     );
 
     if (imagesSliders) {
+        let counter = 0;
+        let sliders = [];
         imagesSliders.forEach((slider) => {
-            const sliderInit = tns({
+            sliders += tns({
                 container: slider,
                 items: 1,
                 autoplay: true,
+                center: true,
                 // uncomment for enable dots
                 // nav: true,
                 // navPosition: "bottom",
@@ -27,24 +30,10 @@ export const imagesSliderInit = () => {
                 swipeAngle: false,
                 controlsPosition: "bottom",
                 controlsText: ["", ""],
-                autoHeight: true,
-                responsive: {
-                    576: {
-                        items: 2,
-                        gutter: 20,
-                    },
-                    992: {
-                        items: 3,
-                        gutter: 20,
-                    },
-                    1200: {
-                        items: 4,
-                    },
-                    1920: {
-                        gutter: 40,
-                    },
-                },
+                autoHeight: true
             });
+
+            counter++;
         });
     }
 };

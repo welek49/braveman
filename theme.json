@@ -18,6 +18,11 @@
                     "name": "Gray",
                     "slug": "gray",
                     "color": "#434343"
+                },
+                {
+                    "name": "Light Gray",
+                    "slug": "light-gray",
+                    "color": "#E3E3E3"
                 }
             ]
         }

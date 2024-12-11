@@ -18,7 +18,7 @@
         color: map-get($colors, 'secondary');
         margin-bottom: 2rem;
         text-align: center;
-        @extend %h5;
+        @extend %h4;
     }
     &__desc {
         text-align: center;

@@ -72,6 +72,7 @@
         justify-content: space-between;
         align-items: center;
         gap: 0 1rem;
+        padding: 0 1rem;
         &--right {
             display: flex;
             justify-content: flex-end;
@@ -123,12 +124,13 @@
                     transition: all 0.4s ease;
                     @extend %nav-font;
                     border-radius: 10px;
+                    color: map-get($colors, "primary");
                     @include from(menuMobile) {
                         padding: 6px 28px;
                         border: 3px solid map-get($colors, "primary");
                     }
                     &:hover {
-                        color: map-get($colors, "primary");
+                        color: #FFF;
                     }
                 }
                 &.menu-item-has-children {
@@ -351,7 +353,7 @@
         position: relative;
         z-index: 2;
         display: flex;
-        @extend %h5;
+        @extend %h4;
         img {
             pointer-events: none;
             width: auto;

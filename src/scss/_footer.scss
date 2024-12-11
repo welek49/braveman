@@ -47,7 +47,7 @@
     &__logo {
         display: block;
         margin-bottom: 2rem;
-        @extend %h5;
+        @extend %h4;
         object {
             max-width: 100%;
         }
@@ -76,7 +76,7 @@
     }
     &__header {
         display: block;
-        @extend %h5;
+        @extend %h4;
         color: #fff;
         &.--empty {
             @include to(tablet) {

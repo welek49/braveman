@@ -1,9 +1,6 @@
 .image-slider {
-    padding: 0 6rem;
+    padding: 0 3rem;
 
-    @include from(desktopL) {
-        padding: 0;
-    }
     &__wrapper {
         position: relative;
     }
@@ -22,27 +19,20 @@
 
         button {
             background: none;
-            border: 1px solid map-get($colors, "secondary");
-            border-radius: 50%;
             display: flex;
-            height: 4rem;
-            width: 4rem;
+            width: 21px;
+            height: 42px;
             justify-content: center;
             align-items: center;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+            border: none;
 
-            @include from(phoneL) {
-                width: 60px;
-                height: 60px;
-            }
-
-            &:before,
-            &:after {
+            &:before {
                 content: "";
-                width: 10px;
-                height: 15px;
+                width: 21px;
+                height: 42px;
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -50,20 +40,7 @@
             }
 
             &:nth-child(1) {
-                left: -60px;
-
-                @include from(phoneL) {
-                    left: -70px;
-                }
-                @include from(tablet) {
-                    left: -80px;
-                }
-                @include from(desktopL) {
-                    left: -140px;
-                }
-                &:before {
-                    margin-right: -4px;
-                }
+                left: -3rem;
 
                 @media (hover: hover) {
                     &:hover::before {
@@ -78,20 +55,7 @@
                 }
             }
             &:nth-child(2) {
-                right: -60px;
-
-                @include from(phoneL) {
-                    right: -70px;
-                }
-                @include from(tablet) {
-                    right: -80px;
-                }
-                @include from(desktopL) {
-                    right: -140px;
-                }
-                &:before {
-                    margin-left: 8px;
-                }
+                right: -3rem;
 
                 @media (hover: hover) {
                     &:hover::before {
