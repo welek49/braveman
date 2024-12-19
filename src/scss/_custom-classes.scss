@@ -5,56 +5,63 @@
 */
 
 @each $name, $color in $colors {
-    .color--#{$name} {
-        color: $color;
-    }
-    .bg--#{$name} {
-        background-color: $color;
-    }
-    .border--#{$name} {
-        border: 1px solid $color;
-    }
+  .color--#{$name} {
+    color: $color;
+  }
+  .bg--#{$name} {
+    background-color: $color;
+  }
+  .border--#{$name} {
+    border: 1px solid $color;
+  }
 }
 
 .section.home-page-hero {
-    position: relative;
-    height: calc(100vh - 100px);
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: right;
-    margin-top: 100px;
-    max-height: 700px;
+  position: relative;
+  height: calc(100vh - 100px);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-top: 100px;
+  max-height: 700px;
 }
 .home-page-hero + figure {
-    position: relative;
-    z-index: 1;
-    margin-top: -30px;
+  position: relative;
+  z-index: 1;
+  margin-top: -30px;
 }
 
 .spark {
-    background-color: #bfa766;
-    visibility: hidden;
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    border-radius: 30%;
-    box-shadow: 0 0 5px #e14802;
+  background-color: #bfa766;
+  visibility: hidden;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 30%;
+  box-shadow: 0 0 5px #e14802;
 }
 
 .contact-info {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    padding: 1rem;
-    p {
-        margin: 0;
-    }
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 1rem;
+  p {
+    margin: 0;
+  }
 }
 
 .bigger-text {
-    p, a {
-        @extend %h3;
-        font-weight: 500;
-        text-decoration: none;
-    }
+  p,
+  a {
+    @extend %h3;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+.red-section {
+  background-color: #d53338;
+  color: #fff;
+  font-size: 24px;
 }
