@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <symbol id="facebook" viewBox="0 0 8 15.999">
+    <symbol id="facebook" viewBox="0 0 50 50">
         <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
             <path
                 d="M25 50C11.165 50 0 38.8349 0 25C0 11.165 11.165 0 25 0C38.8349 0 50 11.165 50 25C50 38.8349 38.8349 50 25 50Z"
@@ -11,7 +11,7 @@
 
     </symbol>
 
-    <symbol id="instagram" viewBox="0 0 18 18">
+    <symbol id="instagram" viewBox="0 0 50 50">
         <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
             <path
                 d="M25.0733 50C11.1437 50 0 38.8563 0 25.0733C0 11.1437 11.1437 0 25.0733 0C38.8563 0 50 11.1437 50 25.0733C50 38.8563 38.8563 50 25.0733 50Z"
