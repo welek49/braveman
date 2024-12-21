@@ -18,17 +18,34 @@
 
 .section.home-page-hero {
   position: relative;
-  height: calc(100vh - 100px);
+  max-height: 700px;
+  margin-top: 40px;
   background-size: auto 100%;
   background-repeat: no-repeat;
-  background-position: right;
-  margin-top: 100px;
-  max-height: 700px;
+  background-position: left;
+  overflow: hidden;
+  @include from(phoneM) {
+    background-position: right;
+  }
+  @include from(laptop) {
+    margin-top: 100px;
+    min-height: calc(100vh - 160px);
+  }
 }
 .home-page-hero + figure {
   position: relative;
   z-index: 1;
-  margin-top: -30px;
+  width: 100%;
+  margin-top: -20px;
+  @include from(tablet) {
+    margin-top: -40px;
+  }
+  @include from(desktopL) {
+    margin-top: -60px;
+  }
+  img {
+    width: 100%;
+  }
 }
 
 .spark {

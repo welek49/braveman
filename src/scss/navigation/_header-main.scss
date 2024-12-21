@@ -44,21 +44,24 @@
 .header {
     position: relative;
     z-index: 9999;
-    padding: 1rem;
-    min-height: 9rem;
+    padding: 0 1rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
-    background-color: radial-gradient(106.5% 339.73% at 35% 60.01%, #000000 0%, #303030 100%);
+    z-index: 999;
     background-image: url($img_path + 'header-bg.webp');
     background-size: 100% 100%;
-    min-height: 137px;
+    min-height: 85px;
+    @include from(phoneL) {
+        min-height: 105px;
+    }
+    @include from(tablet) {
+        min-height: 137px;
+    }
     &.--fixed {
         position: fixed;
         animation: nav-fixed-show 0.6s ease-in-out forwards;
         z-index: 99;
-        min-height: 100px;
     }
     &.--fixed & {
         &__logo {
@@ -308,7 +311,7 @@
                 left: 0;
                 width: 100%;
                 min-height: 100vh;
-                background-color: #fff;
+                background-color: #181818;
                 animation: menu-show 0.4s ease forwards;
                 padding-top: 140px;
                 z-index: 1;
@@ -358,7 +361,13 @@
             pointer-events: none;
             width: auto;
             height: auto;
-
+            max-height: 45px;
+            @include from(phoneM) {
+                max-height: 50px;
+            }
+            @include from(phoneL) {
+                max-height: 64px;
+            }
             @include from(tablet) {
                 max-height: 84px;
             }
@@ -421,7 +430,7 @@
             width: 34px;
             height: 4px;
             border-radius: 2px;
-            background-color: map-get($colors, "secondary");
+            background-color: map-get($colors, "primary");
             transition: all 0.4s ease;
             transform-origin: 50% 50%;
             &:before {

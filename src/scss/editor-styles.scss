@@ -196,7 +196,9 @@ html {
                 max-width: calc(100% - 30px);
                 max-height: 200px;
                 height: auto;
+                margin: 0 auto;
                 padding: 20px 15px 15px;
+                object-fit: contain;
             }
             &-list ul {
                 padding: 20px 32px 15px;
