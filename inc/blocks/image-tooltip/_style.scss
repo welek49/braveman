@@ -1,0 +1,152 @@
+.image-tooltip-section {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+    @include to(tabletL) {
+        flex-direction: column;
+    }
+
+    img {
+        width: auto;
+        height: auto;
+        display: block;
+    }
+
+    .tooltip-container {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        max-width: 236px;
+        position: absolute;
+        transform: translateY(-100%);
+        width: 100%;
+        z-index: 5;
+
+        @include to(tabletL) {
+            position: static;
+            transform: translateY(0);
+            left: 0;
+            top: 0;
+        }
+
+        .tooltip-wrapper {
+            position: relative;
+
+            :hover + .tooltip-content {
+                display: block;
+            }
+        }
+
+        &.tooltip-left {
+            .tooltip-content {
+                left: 10%;
+            }
+
+            .tooltip-inner-wrapper {
+                @include to(tabletL) {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+
+        &.tooltip-right {
+            .tooltip-inner-wrapper {
+                align-items: flex-end;
+                display: flex;
+                flex-direction: column;
+
+                @include to(tabletL) {
+                    align-items: center;
+                }
+            }
+
+            .tooltip-graphics {
+                flex-direction: row-reverse;
+            }
+
+            .tooltip-content {
+                left: -30%;
+            }
+        }
+
+        .tooltip-title {
+            font-size: 14px;
+            color: #000;
+            margin-bottom: 10px;
+            max-width: fit-content;
+
+            @include to(tabletL) {
+                margin: 15px 0;
+                text-align: center;
+            }
+        }
+
+        .tooltip-graphics {
+            display: flex;
+            align-items: center;
+
+            .tooltip-line {
+                width: auto;
+                height: auto;
+
+                svg {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .tooltip-circle {
+                width: 27px;
+                height: 27px;
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            @include to(tabletL) {
+                display: none;
+            }
+        }
+
+        .tooltip-content {
+            display: none;
+            position: absolute;
+            top: -10%;
+            transform: translate(0, -100%);
+            width: 280px;
+            background: #fff;
+            color: #000;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            text-align: center;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+
+            p {
+                margin: 0;
+                font-size: 14px;
+                line-height: 1.5;
+                padding: 10px;
+            }
+
+            @include to(tabletL) {
+                display: block;
+                position: static;
+                transform: translate(0);
+            }
+        }
+    }
+}
