@@ -19,7 +19,7 @@ $footer_description = get_field('footer_description', 'option') ? get_field('foo
             <p class="footer__description"><?= $footer_description ?></p>
         </div>
         <div class="col col-xxs-12 col-xs-12 col-sm-6 footer__logo vertical__center">
-            <object data="<?= $footer_logo['url'] ?>" type="image/svg+xml"></object>
+            <img src="<?= $footer_logo['url'] ?>" alt="footer logo">
             <div class="footer__social">
                 <?php if ($facebook) : ?>
                 <a href="<?= $facebook ?>" target="_blank"><svg>

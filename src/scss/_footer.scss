@@ -65,9 +65,11 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 2rem;
-        object {
+        width: auto;
+
+        img {
             max-width: 174px;
-            max-height: 17px;
+            width: 100%;
         }
         @include to(tablet) {
             text-align: center;
