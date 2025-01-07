@@ -1,0 +1,232 @@
+{
+    "key": "group_677caf7038f8e",
+    "title": "Block - image tooltip",
+    "fields": [
+        {
+            "key": "field_image",
+            "label": "Background Image",
+            "name": "img",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Select the background image for the section.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 1,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_tooltips",
+            "label": "Tooltips",
+            "name": "tooltips",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add tooltips with icons and text.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "layout": "block",
+            "button_label": "Add Tooltip",
+            "max": 0,
+            "rows_per_page": 20,
+            "collapsed": "field_tooltip_text",
+            "sub_fields": [
+                {
+                    "key": "field_tooltip_title",
+                    "label": "Tooltip Title",
+                    "name": "tooltip_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Enter the title for the tooltip.",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Tooltip Title",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_tooltips"
+                },
+                {
+                    "key": "field_tooltip_position",
+                    "label": "Tooltip Position",
+                    "name": "tooltip_position",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "parent_repeater": "field_tooltips",
+                    "sub_fields": [
+                        {
+                            "key": "field_position_x",
+                            "label": "Position X (%)",
+                            "name": "position_x",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "Set the X position of the tooltip (0 to 100).",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 100,
+                            "default_value": "",
+                            "step": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_position_y",
+                            "label": "Position Y (%)",
+                            "name": "position_y",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "Set the Y position of the tooltip (0 to 100).",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 100,
+                            "default_value": "",
+                            "step": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_tooltip_direction",
+                    "label": "Tooltip Direction",
+                    "name": "tooltip_direction",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Select the direction in which the tooltip should appear.",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "left": "Left",
+                        "right": "Right"
+                    },
+                    "default_value": "right",
+                    "allow_null": false,
+                    "multiple": false,
+                    "ui": 1,
+                    "ajax": false,
+                    "return_format": "value",
+                    "placeholder": "",
+                    "parent_repeater": "field_tooltips"
+                },
+                {
+                    "key": "field_tooltip_image",
+                    "label": "Tooltip Image",
+                    "name": "tooltip_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Select the image for the tooltip.",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": 0,
+                    "min_height": 0,
+                    "min_size": 0,
+                    "max_width": 0,
+                    "max_height": 0,
+                    "max_size": 0,
+                    "mime_types": "",
+                    "parent_repeater": "field_tooltips"
+                },
+                {
+                    "key": "field_tooltip_text",
+                    "label": "Tooltip Text",
+                    "name": "tooltip_text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Enter the text for the tooltip.",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 3,
+                    "default_value": "",
+                    "new_lines": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_tooltips"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "bn/image-tooltip"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1736227045
+}
