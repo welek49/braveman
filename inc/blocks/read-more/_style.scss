@@ -5,9 +5,9 @@
 .read-more {
     position: relative;
     display: block;
-    height: 100%;
-    padding-bottom: 40px;
-    max-height: 25px;
+    padding-bottom: 15px;
+    overflow: visible;
+
     &:after {
         content: "";
         display: block;
@@ -17,9 +17,14 @@
         bottom: 0;
         left: 0;
     }
+
+    &__content {
+        overflow: hidden;
+    }
+
     &__label {
         position: absolute;
-        bottom: 0;
+        bottom: -10px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 5;
@@ -27,13 +32,14 @@
         font-size: 13px !important;
         line-height: 17px;
         transition: 0.4s;
+
         &:after {
             content: "";
             display: block;
             position: absolute;
             transition: 0.4s ease-in-out;
-            border-left: 2px solid map-get($colors, 'primary');
-            border-top: 2px solid map-get($colors, 'primary');
+            border-left: 2px solid map-get($colors, "primary");
+            border-top: 2px solid map-get($colors, "primary");
             border-right: none;
             border-bottom: none;
             width: 10px;
@@ -42,10 +48,11 @@
             transform: translateY(-135%) rotate(-135deg);
             right: -25px;
         }
+
         &:hover {
-            color: map-get($colors, 'primary');;
+            color: map-get($colors, "primary");
             &:after {
-                border-color: map-get($colors, 'primary');;
+                border-color: map-get($colors, "primary");
             }
         }
     }

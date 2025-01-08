@@ -5,13 +5,16 @@
  */
 
 export const readMore = () => {
-    const readMoreElements = document.querySelectorAll(".read-more");
+    const readMoreElements = document.querySelectorAll(".read-more__content");
 
     if (readMoreElements.length > 0) {
         readMoreElements.forEach(function (element) {
-            const initialHeight = element.classList.contains("read-more") ? `${heightReadMore}px` : "25px";
+            const initialHeight = element.classList.contains(
+                "read-more__content"
+            )
+                ? `${heightReadMore}px`
+                : "20px";
             element.style.maxHeight = initialHeight;
-            element.style.overflow = "hidden";
             element.style.transition = "max-height 0.5s ease";
 
             const label = document.createElement("span");
@@ -25,9 +28,11 @@ export const readMore = () => {
                 if (isCollapsed) {
                     element.style.maxHeight = element.scrollHeight + "px";
                     label.style.display = "none";
+                    label.textContent = labelReadLess;
                 } else {
                     element.style.maxHeight = initialHeight;
                     label.style.display = "block";
+                    label.textContent = labelReadMore;
                 }
             }
 
