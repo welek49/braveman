@@ -1,6 +1,6 @@
 /*
-* Styles only for read more block
-*/
+ * Styles only for read more block
+ */
 
 .read-more {
     position: relative;
@@ -37,22 +37,31 @@
             content: "";
             display: block;
             position: absolute;
-            transition: 0.4s ease-in-out;
+            transition:
+                transform 0.4s ease-in-out,
+                border-color 0.4s ease-in-out;
             border-left: 2px solid map-get($colors, "primary");
             border-top: 2px solid map-get($colors, "primary");
             border-right: none;
             border-bottom: none;
             width: 10px;
             height: 10px;
-            top: 16px;
-            transform: translateY(-135%) rotate(-135deg);
-            right: -25px;
+            top: 50%;
+            right: -20px;
+            transform-origin: 50% 50%;
+            transform: translateY(-50%) rotate(-135deg);
         }
 
         &:hover {
             color: map-get($colors, "primary");
             &:after {
                 border-color: map-get($colors, "primary");
+            }
+        }
+
+        &.expanded {
+            &:after {
+                transform: translateY(-50%) rotate(45deg);
             }
         }
     }

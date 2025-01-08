@@ -63,7 +63,7 @@
         {
             "key": "field_677eabfa42c8a",
             "label": "Label \"Read less\"",
-            "name": "read-less_label_read_more",
+            "name": "read-less_label_read_less",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -216,5 +216,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1736354845
+    "modified": 1736372256
 }
